@@ -2,6 +2,7 @@
 #define FIXED_HPP
 
 #include <iostream>
+#include <cmath>
 
 class Fixed{
 
@@ -16,13 +17,13 @@ class Fixed{
         Fixed(const Fixed& other);
         ~Fixed();
 
-        Fixed operator=(const Fixed& other);
+        Fixed& operator=(const Fixed& other);
         friend std::ostream& operator<<(std::ostream& os, const Fixed& obj);
 
-        Fixed operator+(const Fixed& other);
-        Fixed operator-(const Fixed& other);
-        Fixed operator*(const Fixed& other);
-        Fixed operator/(const Fixed& other);
+        Fixed operator+(const Fixed& other) const;
+        Fixed operator-(const Fixed& other) const;
+        Fixed operator*(const Fixed& other) const;
+        Fixed operator/(const Fixed& other) const;
 
         bool operator>(const Fixed& other) const;
         bool operator<(const Fixed& other) const;

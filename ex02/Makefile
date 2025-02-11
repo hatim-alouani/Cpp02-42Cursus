@@ -9,7 +9,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CC) -o $(NAME) $(OBJS)
 
-%.o: %.cpp $(HEADE)
+%.o: %.cpp $(HEADER)
 	$(CC) -c $< -o $@	
 
 clean: 
